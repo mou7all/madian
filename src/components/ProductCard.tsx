@@ -29,7 +29,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
       <div
         className="card-hover group bg-white rounded-2xl overflow-hidden shadow-md border border-rose-gold/10 h-full"
       >
-        <div className="relative h-56 bg-gradient-to-br from-navy/5 to-rose-gold/10 overflow-hidden">
+        <Link href={`/products/${product.id}`} className="relative h-56 bg-gradient-to-br from-navy/5 to-rose-gold/10 overflow-hidden block cursor-pointer">
           {product.images.length > 0 ? (
             <Image
               src={product.images[0]}
@@ -52,7 +52,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
               {category}
             </span>
           </div>
-        </div>
+        </Link>
 
         <div className="p-5">
           <h3 className="text-lg font-bold text-navy mb-2 group-hover:text-rose-gold-dark transition-colors duration-300">
